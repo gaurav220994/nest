@@ -1,6 +1,6 @@
 import { Body, Controller, Post, Get, Param } from '@nestjs/common';
 import { ProductsService } from './products.service';
-import { Role, Roles } from 'src/auth/constants';
+import { Role, Roles } from '../auth/constants';
 
 @Controller('products')
 export class ProductsController {

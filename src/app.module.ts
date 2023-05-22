@@ -5,9 +5,13 @@ import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { DevtoolsModule } from '@nestjs/devtools-integration';
 
 @Module({
   imports: [
+    DevtoolsModule.register({
+      http: true,
+    }),
     ProductsModule,
     MongooseModule.forRoot('mongodb://127.0.0.1:27017/Nest'),
     AuthModule,

@@ -1,7 +1,7 @@
 import { Body, Controller, Post, Get, Param } from '@nestjs/common';
 
 import { UsersService } from './users.service';
-import { Public } from 'src/auth/constants';
+import { Public } from '../auth/constants';
 
 @Controller('users')
 export class UsersController {
@@ -10,8 +10,7 @@ export class UsersController {
   @Public()
   @Post()
   addUser(
-    @Body('email')
-    email: string,
+    @Body('email') email: string,
     @Body('password') password: string,
     @Body('name') name: string,
     @Body('roles') roles: string[],
